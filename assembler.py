@@ -106,6 +106,9 @@ elif ( partes[0] == 'beq' ):
 	instruction = '1101' + cond + '{:08b}'.format(offset)
 	hexins = '{:04x}'.format(int(instruction,2))
 	hexinsp = list(hexins)
+	hexinsp[0:2] = hexins[2:4]
+	hexinsp[2:4] = hexins[0:2]
+	print(''.join(hexinsp))
 elif ( partes[0] == 'bge' ):
 	present_ins = int(input('end ins atual'), 16)
 	ins = int(input('end instruction alvo'), 16)
@@ -133,10 +136,6 @@ elif ( partes[0] == 'ldr' ):
 	instruction = '0110100000' + Rn + Rt
 	hexins = '{:04x}'.format(int(instruction,2))
 	hexinsp = list(hexins)
-	hexinsp[0:2] = hexins[2:4]
-	hexinsp[2:4] = hexins[0:2]
-	print(''.join(hexinsp))
-
 	hexinsp[0:2] = hexins[2:4]
 	hexinsp[2:4] = hexins[0:2]
 	print(''.join(hexinsp))
