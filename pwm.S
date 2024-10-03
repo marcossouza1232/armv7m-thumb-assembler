@@ -54,7 +54,6 @@ str r1, [r0, 0x0]
 movw r1, 0x0005
 str r1, [r0, 0x30]
 
-repete:
 movw r2, 0x0000
 movw r3, 0xFFFF
 movw r4, 0x0000
@@ -71,6 +70,6 @@ str r2, [r0, 0x34]
 cmp r2, r4
 bne descida
 
-b repete
+b subida
 
 
